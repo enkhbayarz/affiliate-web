@@ -6,6 +6,7 @@ import {
    getMerchantIdList,
    getMerchantProducts
 } from '@/lib/api/server/apis';
+import Link from 'next/link';
 import { Suspense } from 'react';
 
 type Props = {
@@ -58,19 +59,19 @@ async function List({ merchantId, affiliateId }: { merchantId: string; affiliate
    return (
       <>
          <div className="sticky top-0 z-10 space-y-3 border-b bg-white px-5 py-8">
-            <div className="mx-auto flex w-full max-w-6xl flex-row justify-between ">
-               <div className="flex items-center space-x-3">
-                  <Avatar className="h-9 w-9">
+            <div className="mx-auto flex w-full max-w-5xl flex-row justify-between ">
+               <Link href={`/store/${merchantId}`} className="flex items-center space-x-3">
+                  <Avatar className="h-8 w-8">
                      <AvatarImage
                         src={`https://avatar.vercel.sh/${
                            merchantResponse?.merchant?.storeName || 'gumroad'
                         }`}
                      />
                   </Avatar>
-                  <h1 className="text-lg font-semibold">
+                  <h1 className="text-lg font-semibold capitalize">
                      {merchantResponse?.merchant?.storeName || ''}
                   </h1>
-               </div>
+               </Link>
             </div>
          </div>
 

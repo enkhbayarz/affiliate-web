@@ -242,18 +242,18 @@ export default function CheckoutView() {
                   </Form>
                </Card>
             ) : (
-               <Card className="h-fit space-y-5 rounded-sm border  p-3">
+               <Card className="h-fit space-y-5 rounded-sm border p-3">
                   <h1 className="py-1 text-center ">Scan QR code to pay</h1>
-                  <div className="min-h-56 mx-auto w-56 space-y-8">
-                     <div className="flex flex-row flex-wrap items-center justify-center sm:hidden">
+                  <div className="min-h-56 mx-auto flex w-full flex-col items-center space-y-8 sm:w-56">
+                     <div className="flex flex-row flex-wrap items-center justify-center  sm:hidden">
                         {qPay.urls.map((link) => (
                            <div key={link.name} className="m-2 rounded-sm">
                               <a href={link.link} target="_blank" rel="noopener">
                                  <Image
                                     alt={link.name}
                                     src={link.logo}
-                                    width={40}
-                                    height={40}
+                                    width={50}
+                                    height={50}
                                     style={{ borderRadius: '5px', backgroundColor: 'gray' }}
                                  />
                               </a>
