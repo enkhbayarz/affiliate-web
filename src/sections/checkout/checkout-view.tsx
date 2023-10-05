@@ -26,6 +26,7 @@ import { getError } from '@/utils/api-error';
 import toCurrencyString from '@/utils/format-number';
 import { fDateTime } from '@/utils/format-time';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { ReloadIcon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
@@ -232,7 +233,11 @@ export default function CheckoutView() {
                               type="submit"
                               disabled={form.formState.isSubmitting}
                            >
-                              {form.formState.isSubmitting ? '...' : 'Pay'}
+                              {form.formState.isSubmitting ? (
+                                 <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+                              ) : (
+                                 'Pay'
+                              )}
                            </Button>
                         </div>
                      </form>
