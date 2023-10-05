@@ -11,9 +11,13 @@ export default function ProductOption({ option }: Props) {
 
    return (
       <div className="relative flex h-12 w-full items-center justify-between px-5">
-         <p className="flex-1 text-center text-sm">{toCurrencyString(option.price)}</p>
-         <Separator orientation="vertical" className="h-full" />
-         <p className="flex-1 text-center text-sm text-brand">{option.duration} month</p>
+         <p className="flex-1 text-center text-sm font-semibold">
+            {toCurrencyString(option.price)}
+         </p>
+         <Separator orientation="vertical" className="h-full bg-gray-300" />
+         <p className="flex-1 text-center text-sm">
+            <strong>{option.duration}</strong> {option.type}
+         </p>
       </div>
    );
 }

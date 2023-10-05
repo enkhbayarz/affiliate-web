@@ -16,16 +16,16 @@ export default function ProductCard({ product, affiliateId }: Props) {
 
    return (
       <Link href={url}>
-         <Card className="w-full cursor-pointer rounded-sm bg-white text-background">
+         <Card className="w-full cursor-pointer rounded-md border border-gray-300 bg-white text-background shadow-xl drop-shadow-sm">
             <div className="relative h-80 w-full">
                <Image src={product.thumbnail?.desktop || ''} alt={product.title} fill />
             </div>
 
             <div className="border-t px-4 py-5">
-               <h1 className="text-sm font-light">{product.title}</h1>
+               <h1>{product.title}</h1>
             </div>
 
-            <div className="flex flex-wrap border-t">
+            <div className="flex flex-wrap border-t border-gray-300">
                <ProductOption option={product.option[0]} />
             </div>
          </Card>

@@ -76,7 +76,7 @@ export default function ProductDetail({ product, affiliateId }: Props) {
          </div>
 
          <div className="mx-auto max-w-5xl">
-            <div className="relative h-80 w-full overflow-hidden sm:h-96 md:h-[600px]">
+            <div className="relative h-56 w-full overflow-hidden sm:h-96 md:h-[600px]">
                <Image src={product.coverImage.desktop} alt={product.title} fill />
             </div>
 

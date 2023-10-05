@@ -8,7 +8,7 @@ type Props = {
 
 export default function ProductList({ products, affiliatedProducts }: Props) {
    return (
-      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 justify-between gap-5 px-5 pb-16 sm:grid-cols-2 lg:grid-cols-3 ">
+      <div className="mx-auto grid w-full max-w-5xl grid-cols-1 justify-between gap-5 px-5 pb-16 sm:grid-cols-2 lg:grid-cols-3 ">
          {products?.map((product) => (
             <ProductCard
                key={product._id}
