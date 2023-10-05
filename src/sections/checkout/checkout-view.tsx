@@ -172,11 +172,11 @@ export default function CheckoutView() {
                         <div className="space-y-2">
                            <h1 className="text-sm font-bold">{product.title}</h1>
                            <div>
-                              <Link href={`/store/${product.merchant._id}`}>
+                              {/* <Link href={`/store/${product.merchant._id}`}> */}
                                  <h1 className="text-sm font-normal text-brand underline">
                                     {product.merchant.storeName}
                                  </h1>
-                              </Link>
+                              {/* </Link> */}
                            </div>
                         </div>
 
