@@ -62,11 +62,7 @@ export default function ProductDetail({ product, affiliateId }: Props) {
                   <Avatar className="h-8 w-8">
                      <AvatarImage src={`https://avatar.vercel.sh/${product.merchant.storeName}`} />
                   </Avatar>
-                  <Link href={
-                              affiliateId
-                                 ? `/store/${product.merchant._id}?affiliateId=${affiliateId}`
-                                 : `/store/${product.merchant._id}`
-                           }>
+                  <Link href={`/store/${product.merchant._id}`}>
                      <h1 className="text-lg font-semibold capitalize ">
                         {product.merchant.storeName}
                      </h1>
